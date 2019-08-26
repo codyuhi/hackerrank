@@ -1,0 +1,38 @@
+Start : video
+-> width > 640
+-> height > 360
+Empty : source
+-> src > __VIDEO__.MP4
+-> type > video/mp4
+Empty : source
+-> src > __VIDEO__.OGV
+-> type > video/ogg
+Start : object
+-> width > 640
+-> height > 360
+-> type > application/x-shockwave-flash
+-> data > __FLASH__.SWF
+Empty : param
+-> name > movie
+-> value > __FLASH__.SWF
+Empty : param
+-> name > flashvars
+-> value > controlbar=over&image=__POSTER__.JPG&file=__VIDEO__.MP4
+Empty : img
+-> src > __VIDEO__.JPG
+-> width > 640
+-> height > 360
+-> alt > __TITLE__
+-> title > No video playback capabilities, please download the video below
+End   : object
+End   : video
+Start : p
+Start : strong
+End   : strong
+Start : a
+-> href > __VIDEO__.MP4
+End   : a
+Start : a
+-> href > __VIDEO__.OGV
+End   : a
+End   : p
